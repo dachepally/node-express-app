@@ -24,6 +24,10 @@ app.get('/yo/:buddy',  (req, res) =>{
   res.send('<h1>Yo, ' + req.params.buddy + '!</h1>')
 })
 
+app.get('/northwest', (req,res)=>{
+  res.send('Welcome to NorthWest')
+})
+
 // handle non-existant routes
 app.use((req, res, next) => {
   res.status(404).send('status 404 - that page was not found');
